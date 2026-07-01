@@ -91,9 +91,26 @@
         {
           "platform": "tiktok",
           "url": "https://tiktok.com/stoic_traderz"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://youtube.com/@stoictrader"
         }
       ],
-      "socialChannels": [],
+      "socialChannels": [
+        {
+          "platform": "Instagram",
+          "handle": "@stoictraderzz",
+          "followers": "150K+",
+          "url": "https://instagram.com/stoictraderzz"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@stoictrader",
+          "followers": "Growing",
+          "url": "https://youtube.com/@stoictrader"
+        }
+      ],
       "niche": "Trading"
     },
     {
@@ -130,14 +147,24 @@
         {
           "platform": "instagram",
           "url": "https://instagram.com/hurairah_trades"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://youtube.com/@hurairah_trades"
         }
       ],
       "socialChannels": [
         {
           "platform": "Instagram",
-          "handle": "@Hurraira_Trades",
-          "followers": "550+ K",
-          "url": ""
+          "handle": "@hurairah_trades",
+          "followers": "550K+",
+          "url": "https://instagram.com/hurairah_trades"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@hurairah_trades",
+          "followers": "Active",
+          "url": "https://youtube.com/@hurairah_trades"
         }
       ],
       "niche": "Trading"
@@ -177,7 +204,9 @@
         "outcome": "Significantly boosted online sales through striking visual ad campaigns.",
         "image": "/assets/cs-arfragrances.png",
         "statList": [
-          "High Engagement"
+          "High-End Production",
+          "Sales Growth",
+          "Brand Prestige"
         ]
       },
       {
@@ -208,7 +237,11 @@
         ],
         "outcome": "Elevated brand perception and drove increased sales volume across the hoodie and tracksuits collections.",
         "image": "/assets/cs-surteez.png",
-        "statList": []
+        "statList": [
+          "Dynamic Ads",
+          "Sales Volume",
+          "Premium Perception"
+        ]
       },
       {
         "id": "cs-3",
@@ -238,7 +271,11 @@
         ],
         "outcome": "Generated viral attention and accelerated product movement.",
         "image": "/assets/cs-pyariscents.png",
-        "statList": []
+        "statList": [
+          "Viral Reach",
+          "Product Movement",
+          "Luxury Creatives"
+        ]
       }
     ]
   },
