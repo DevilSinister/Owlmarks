@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger, Draggable } from 'gsap/all';
 import { FaInstagram, FaTiktok, FaYoutube, FaTwitter, FaLinkedin, FaFacebook, FaLink } from 'react-icons/fa6';
 import { owmarkContent } from '../data/owmarkContent';
+import CaseStudyModal from './CaseStudyModal';
 import './TalentShowcase.css';
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
@@ -60,6 +61,7 @@ const TalentShowcase = () => {
     const sectionRef = useRef(null);
     const containerRef = useRef(null);
     const cardsRef = useRef([]);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -90,6 +92,7 @@ const TalentShowcase = () => {
                     duration: 1,
                     stagger: 0.1,
                     ease: "power3.out",
+                    clearProps: "transform",
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start: "top 70%",
@@ -106,8 +109,15 @@ const TalentShowcase = () => {
 
     return (
         <section className="talent-section" ref={sectionRef}>
-            <div className="container">
+            {selectedProject && (
+                <CaseStudyModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+            )}
+            <div className="container talent-header-flex">
                 <h2 className="talent-headline">THE ROSTER.</h2>
+                <div className="swipe-indicator-mobile">
+                    <span>Swipe left</span>
+                    <span className="arrow-pulse">→</span>
+                </div>
             </div>
 
             <div className="talent-carousel-wrapper">
@@ -117,6 +127,8 @@ const TalentShowcase = () => {
                             key={talent.id}
                             className="talent-card"
                             ref={el => cardsRef.current[index] = el}
+                            onClick={() => setSelectedProject(talent)}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div
                                 className="talent-img"

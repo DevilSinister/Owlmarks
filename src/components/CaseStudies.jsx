@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { owmarkContent } from '../data/owmarkContent';
+import CaseStudyModal from './CaseStudyModal';
 import './CaseStudies.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,6 +11,7 @@ const CaseStudies = () => {
     const sectionRef = useRef(null);
     const headlineRef = useRef(null);
     const casesRef = useRef([]);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -44,11 +46,11 @@ const CaseStudies = () => {
 
                 tl.fromTo(content,
                     { y: 50, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+                    { y: 0, opacity: 1, duration: 1, ease: "power3.out", clearProps: "transform" }
                 )
                     .fromTo(image,
                         { scale: 1.1, opacity: 0 },
-                        { scale: 1, opacity: 1, duration: 1.2, ease: "power2.out" },
+                        { scale: 1, opacity: 1, duration: 1.2, ease: "power2.out", clearProps: "transform" },
                         "-=0.8"
                     );
             });
@@ -62,15 +64,22 @@ const CaseStudies = () => {
 
     return (
         <section className="cs-section" ref={sectionRef}>
+            {selectedProject && (
+                <CaseStudyModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+            )}
             <div className="container">
 
                 {/* HEADLINE */}
-                <div className="cs-header-wrapper">
+                <div className="cs-header-wrapper cs-header-flex">
                     <h2 className="cs-main-headline" ref={headlineRef}>
                         {caseStudiesSection.headlineLine1}
                         <br />
                         <span className="cs-headline-outline">{caseStudiesSection.headlineLine2}</span>
                     </h2>
+                    <div className="swipe-indicator-mobile cs-swipe-style">
+                        <span>Swipe left</span>
+                        <span className="arrow-pulse">→</span>
+                    </div>
                 </div>
 
                 {/* CASE LIST */}
@@ -80,7 +89,8 @@ const CaseStudies = () => {
                             key={item.id}
                             ref={el => casesRef.current[index] = el}
                             className={`cs-row ${index % 2 !== 0 ? 'cs-row-reverse' : ''}`}
-                            style={{ top: `${index * 30}px` }} // Subtle Stacking Offset
+                            onClick={() => setSelectedProject(item)}
+                            style={{ top: `${index * 30}px`, cursor: 'pointer' }} // Subtle Stacking Offset
                         >
 
                             {/* CONTENT BLOCK */}

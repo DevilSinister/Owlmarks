@@ -22,6 +22,7 @@ const HospitalityV2 = lazy(() => import('./pages/HospitalityV2'))
 
 const CaseStudiesPage = lazy(() => import('./pages/CaseStudies'))
 const FounderProfile = lazy(() => import('./pages/FounderProfile'))
+const Admin = lazy(() => import('./pages/Admin'))
 
 // Loading Fallback
 const PageLoader = () => (
@@ -86,8 +87,6 @@ const PageTransitionOverlay = () => {
 }
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
   return (
     <Router>
       <div className="app-container">
@@ -95,7 +94,7 @@ function App() {
         <PageTransitionOverlay />
         <Suspense fallback={<PageLoader />}>
           <Routes>
-            <Route path="/" element={<Home loading={loading} setLoading={setLoading} />} />
+            <Route path="/" element={<Home />} />
 
             {/* Standard Routes */}
             <Route path="/talent" element={<Talent />} />
@@ -115,6 +114,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/founder/:slug" element={<FounderProfile />} />
             <Route path="/apply" element={<Apply />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Suspense>
       </div>

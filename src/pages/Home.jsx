@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/Hero';
 import Umbrella from '../components/Umbrella';
 import Authority from '../components/Authority';
@@ -7,27 +7,19 @@ import CaseStudies from '../components/CaseStudies';
 import Process from '../components/Process';
 import Founders from '../components/Founders';
 import FinalCTA from '../components/FinalCTA';
-import IntroLoader from '../components/IntroLoader';
 
-const Home = ({ loading, setLoading }) => {
-
+const Home = () => {
     return (
-        <>
-            {loading ? (
-                <IntroLoader onComplete={() => setLoading(false)} />
-            ) : (
-                <main>
-                    <Hero />
-                    <Umbrella />
-                    <Authority />
-                    <TalentShowcase />
-                    <CaseStudies />
-                    <Process />
-                    <Founders />
-                    <FinalCTA />
-                </main>
-            )}
-        </>
+        <main>
+            <Hero />
+            <Umbrella />
+            <Authority />
+            <TalentShowcase />
+            <CaseStudies />
+            <Process />
+            <Founders />
+            <FinalCTA />
+        </main>
     );
 };
 

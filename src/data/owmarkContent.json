@@ -1,0 +1,877 @@
+{
+  "hero": {
+    "heroLines": [
+      "We control attention",
+      "We scale influence",
+      "We dominate markets"
+    ],
+    "heroMainHeadline": "OWLMARK",
+    "heroCTA1": "Our Work",
+    "heroCTA2": "Contact Us",
+    "heroBackgroundVideo": "/assets/hero-bg.mp4",
+    "heroFallbackImage": "/assets/hero-fallback.jpg"
+  },
+  "introLoader": {
+    "introLines": [
+      "Redefining Influence",
+      "Architecting Attention",
+      "Scaling Dominance"
+    ],
+    "highlightWord": "OWLMARK"
+  },
+  "metrics": {
+    "metric1Number": "70K+",
+    "metric1Label": "Followers Managed",
+    "metric2Number": "200+",
+    "metric2Label": "Content Campaigns Delivered",
+    "metric3Number": "100%",
+    "metric3Label": "Client Satisfaction"
+  },
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "Talent Management",
+      "shortDescription": "Strategic career development for top-tier creators. We build long-term value, not short-term hype.",
+      "image": "/assets/service-talent.jpg"
+    },
+    {
+      "id": "srv-2",
+      "title": "Influencer Strategy",
+      "shortDescription": "Data-driven campaigns that convert. We identify the right voices to amplify your brand message.",
+      "image": "/assets/service-strategy.jpg"
+    },
+    {
+      "id": "srv-3",
+      "title": "Hospitality Marketing",
+      "shortDescription": "Elevating luxury destinations through immersive digital storytelling and targeted reach.",
+      "image": "/assets/service-hospitality.jpg"
+    },
+    {
+      "id": "srv-4",
+      "title": "Brand Positioning",
+      "shortDescription": "Redefining how the world sees you. We craft narratives that resonate and endure.",
+      "image": "/assets/service-brand.jpg"
+    }
+  ],
+  "talentShowcase": [
+    {
+      "id": "tln-1",
+      "category": "Finance",
+      "name": "Stoic Trader",
+      "relationship": "EXCLUSIVELY SIGNED",
+      "location": "Pakistan",
+      "campaignDuration": "Since 2023",
+      "metricHeadline": "1.2M FOLLOWERS",
+      "title": "The Market Philosopher",
+      "logo": "/assets/tlt-stoic.png",
+      "description": "Managed his social media accounts and content creation for his brand.",
+      "servicesProvided": [
+        "Account Handling",
+        "Content Creation",
+        "Content Ideas",
+        "Content Strategy"
+      ],
+      "metrics": {
+        "followers": "150k+",
+        "engagement": "8.5%",
+        "reach": "2M/mo",
+        "demographic": "Gen Z",
+        "avgViews": "80K"
+      },
+      "visuals": [
+        "/assets/tlt-stoic.png"
+      ],
+      "outcome": "Has built one of the most loyal financial communities on Instagram, driving consistent high-ticket conversions.",
+      "image": "/assets/tlt-stoic.png",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/stoictraderzz"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://tiktok.com/stoic_traderz"
+        }
+      ],
+      "socialChannels": [],
+      "niche": "Trading"
+    },
+    {
+      "id": "tln-2",
+      "category": "Finance",
+      "name": "Hurraira Trades",
+      "relationship": "MANAGED",
+      "location": "Pakistan",
+      "logo": "/assets/talent-hurraira.png",
+      "campaignDuration": "Since 2K Followers",
+      "website": "https://instagram.com/hurairah_trades",
+      "metricHeadline": "550K+ FOLLOWERS",
+      "title": "Trading Educator",
+      "description": "We worked closely with Hurraira to build a massive audience, taking him from 2k followers to over 200k in record time.",
+      "servicesProvided": [
+        "Audience Scaling",
+        "Content Editing",
+        "Strategy"
+      ],
+      "metrics": {
+        "followers": "550K",
+        "engagement": "High",
+        "reach": "5M/mo",
+        "demographic": "Traders",
+        "avgViews": "100K",
+        "conversion": "High Volume"
+      },
+      "visuals": [
+        "/assets/talent-hurraira.png"
+      ],
+      "outcome": "Massive exponential follower growth, turning basic trading insights into viral lessons.",
+      "image": "/assets/talent-hurraira.png",
+      "socials": [
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/hurairah_trades"
+        }
+      ],
+      "socialChannels": [
+        {
+          "platform": "Instagram",
+          "handle": "@Hurraira_Trades",
+          "followers": "550+ K",
+          "url": ""
+        }
+      ],
+      "niche": "Trading"
+    }
+  ],
+  "caseStudiesSection": {
+    "headlineLine1": "PROVEN.",
+    "headlineLine2": "RESULTS.",
+    "caseStudies": [
+      {
+        "id": "cs-1",
+        "category": "E-Commerce",
+        "name": "AR Fragrances",
+        "relationship": "Video Advertising",
+        "location": "Pakistan",
+        "campaignDuration": "Ongoing",
+        "website": "https://arfragrances.pk",
+        "metricHeadline": "HIGH CONVERSION",
+        "title": "AR Fragencies Perfumes",
+        "description": "High-end video ad campaigns driving sales and brand prestige for Pakistan's best perfume brand.",
+        "servicesProvided": [
+          "Video Ads",
+          "Creative Direction",
+          "Performance Marketing"
+        ],
+        "metrics": {
+          "impressions": "Massive",
+          "reach": "Targeted",
+          "engagementRate": "High",
+          "conversions": "Boosted",
+          "ctr": "High",
+          "roas": "High"
+        },
+        "visuals": [
+          "/assets/cs-arfragrances.png"
+        ],
+        "outcome": "Significantly boosted online sales through striking visual ad campaigns.",
+        "image": "/assets/cs-arfragrances.png",
+        "statList": [
+          "High Engagement"
+        ]
+      },
+      {
+        "id": "cs-2",
+        "category": "Fashion",
+        "name": "Surteez",
+        "relationship": "Video Advertising",
+        "location": "Online",
+        "campaignDuration": "Ongoing",
+        "website": "https://surteez.com",
+        "metricHeadline": "INCREASED SALES",
+        "title": "Premium Casual Wear",
+        "description": "Dynamic video advertisements highlighting premium casual wear and driving conversions.",
+        "servicesProvided": [
+          "Video Ads",
+          "Creative Strategy"
+        ],
+        "metrics": {
+          "impressions": "Targeted",
+          "reach": "Broad",
+          "engagementRate": "Excellent",
+          "conversions": "High",
+          "ctr": "Strong",
+          "roas": "Positive"
+        },
+        "visuals": [
+          "/assets/cs-surteez.png"
+        ],
+        "outcome": "Elevated brand perception and drove increased sales volume across the hoodie and tracksuits collections.",
+        "image": "/assets/cs-surteez.png",
+        "statList": []
+      },
+      {
+        "id": "cs-3",
+        "category": "E-Commerce",
+        "name": "Pyari Scents",
+        "relationship": "Video Advertising",
+        "location": "Online",
+        "campaignDuration": "Ongoing",
+        "website": "https://www.pyariscents.com",
+        "metricHeadline": "VIRAL REACH",
+        "title": "Luxury Scents Ads",
+        "description": "Sleek video creatives designed to capture attention and elevate the perception of luxury scents.",
+        "servicesProvided": [
+          "Video Ads",
+          "Content Production"
+        ],
+        "metrics": {
+          "impressions": "High",
+          "reach": "Expanded",
+          "engagementRate": "Strong",
+          "conversions": "Rapid",
+          "ctr": "High",
+          "roas": "High"
+        },
+        "visuals": [
+          "/assets/cs-pyariscents.png"
+        ],
+        "outcome": "Generated viral attention and accelerated product movement.",
+        "image": "/assets/cs-pyariscents.png",
+        "statList": []
+      }
+    ]
+  },
+  "foundersSection": {
+    "headlineLine1": "VISIONARIES.",
+    "headlineLine2": "ARCHITECTS.",
+    "founders": [
+      {
+        "id": "fnd-1",
+        "slug": "mustafa-hocane",
+        "name": "Mustafa Hocane",
+        "role": "CEO & Founder",
+        "image": "/assets/mustafa.jpg",
+        "bio": "Visionary leader with 7 years of experience in digital media and talent management.",
+        "fullBio": "Mustafa Hocane is the driving force behind OwlMark. With over a decade of experience in digital media, he has mastered the art of attention arbitrage. His philosophy is simple: attention is the new currency, and he knows exactly how to mint it for his clients.",
+        "stats": {
+          "experience": "7 Years",
+          "campaigns": "150+",
+          "network": "Global"
+        },
+        "socials": [
+          {
+            "platform": "instagram",
+            "url": "https://instagram.com/mustafa_hocane"
+          },
+          {
+            "platform": "spotify",
+            "url": "https://open.spotify.com/artist/1vCg3EkdYcGWy1zuILA0oB?si=ae5b230a8ca24c26"
+          }
+        ],
+        "projects": [
+          "cs-1",
+          "cs-4",
+          "cs-3",
+          "cs-2",
+          "tln-1",
+          "tln-2"
+        ]
+      },
+      {
+        "id": "fnd-2",
+        "slug": "sinister",
+        "name": "Sinister",
+        "role": "Creative Director",
+        "image": "/assets/sinister.jpg",
+        "bio": "Creative strategist known for breaking the mold and setting new industry standards.",
+        "fullBio": "Sinister is the creative soul of the agency. An award-winning strategist who believes that in a world of noise, only the unique survive. He constructs visual narratives that don't just tell a story—they start movements.",
+        "stats": {
+          "experience": "5 Years",
+          "videos_directed": "30+",
+          "specialty": "Viral Strategy"
+        },
+        "socials": [
+          {
+            "platform": "instagram",
+            "url": "https://instagram.com/sinisteronset"
+          }
+        ],
+        "projects": [
+          "cs-5",
+          "cs-2",
+          "tln-1"
+        ]
+      }
+    ]
+  },
+  "umbrellaSection": {
+    "mainHeadlineLine1": "THREE",
+    "mainHeadlineLine2": "FORCES.",
+    "mainHeadlineLine3": "ONE VISION.",
+    "pillarsArray": [
+      {
+        "id": "p1",
+        "title": "Talent Management",
+        "shortDescription": "Building Legacies.",
+        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+        "linkTarget": "#talent"
+      },
+      {
+        "id": "p2",
+        "title": "Brand Strategy",
+        "shortDescription": "Dominating Markets.",
+        "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop",
+        "linkTarget": "#strategy"
+      },
+      {
+        "id": "p3",
+        "title": "Marketing",
+        "shortDescription": "Amplifying Reach.",
+        "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop",
+        "linkTarget": "#marketing"
+      }
+    ]
+  },
+  "authoritySection": {
+    "headlineLine1": "DATA.",
+    "headlineLine2": "DOMINANCE.",
+    "headlineLine3": "SCALE.",
+    "metricsArray": [
+      {
+        "number": "350K+",
+        "label": "Followers Managed"
+      },
+      {
+        "number": "200+",
+        "label": "Content Campaigns Delivered"
+      },
+      {
+        "number": "#1",
+        "label": "Agency in Region"
+      }
+    ]
+  },
+  "processSection": {
+    "headlineLine1": "THE",
+    "headlineLine2": "BLUEPRINT.",
+    "stepsArray": [
+      {
+        "number": "01",
+        "title": "Audit & Analysis",
+        "description": "Deconstructing your current digital footprint to identify gaps and opportunities."
+      },
+      {
+        "number": "02",
+        "title": "Strategy Phase",
+        "description": "Crafting a bespoke roadmap that aligns creative vision with market dominance."
+      },
+      {
+        "number": "03",
+        "title": "Execution",
+        "description": "Deploying high-impact assets and campaigns with surgical precision."
+      },
+      {
+        "number": "04",
+        "title": "Optimization",
+        "description": "Continuous data-driven refinement to ensure sustained growth and ROI."
+      }
+    ]
+  },
+  "finalCTA": {
+    "finalHeadline": "Ready to Scale ur Social Presence?",
+    "finalButtonText": "Contact us"
+  },
+  "talentV2": {
+    "hero": {
+      "line1": "YOU HAVE",
+      "line2": "ATTENTION.",
+      "line3": "WE BUILD",
+      "line4": "EMPIRES.",
+      "ctaText": "APPLY FOR REPRESENTATION",
+      "subText": "Limited partnerships per quarter."
+    },
+    "plateau": {
+      "headline": "MOST CREATORS STALL.",
+      "points": [
+        "Random brand deals",
+        "No positioning",
+        "No leverage",
+        "No negotiation power"
+      ]
+    },
+    "ascensionModel": {
+      "title": "THE OWLMARK ASCENSION MODEL",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Authority Positioning"
+        },
+        {
+          "number": "02",
+          "title": "Audience Engineering"
+        },
+        {
+          "number": "03",
+          "title": "Strategic Monetization"
+        },
+        {
+          "number": "04",
+          "title": "Brand Partnership Leverage"
+        },
+        {
+          "number": "05",
+          "title": "Long-Term Equity"
+        }
+      ]
+    },
+    "proofOfScale": {
+      "metrics": [
+        {
+          "value": "300%",
+          "label": "Revenue Growth"
+        },
+        {
+          "value": "100K+",
+          "label": "New Reach"
+        },
+        {
+          "value": "High",
+          "label": "Deal Volume"
+        }
+      ]
+    },
+    "selectivity": {
+      "headlineLine1": "WE DON'T",
+      "headlineLine2": "MANAGE",
+      "headlineLine3": "EVERYONE.",
+      "traits": [
+        "Consistent Output",
+        "Unique Voice",
+        "Empire Mindset",
+        "Coachability"
+      ]
+    },
+    "finalCTA": {
+      "headline": "READY TO SCALE BEYOND CONTENT?",
+      "buttonText": "APPLY NOW"
+    }
+  },
+  "brandsV2": {
+    "hero": {
+      "line1": "BRANDS",
+      "line2": "DON'T GO",
+      "line3": "VIRAL.",
+      "line4": "THEY",
+      "line5": "ENGINEER",
+      "line6": "ATTENTION.",
+      "ctaText": "REQUEST STRATEGY CALL"
+    },
+    "marketReality": {
+      "headlineLine1": "ATTENTION",
+      "headlineLine2": "IS SATURATED.",
+      "description": "Organic reach is dead. Complexity is high. You don't need another campaign. You need an operating system for attention."
+    },
+    "strategicArchitecture": {
+      "title": "STRATEGIC ARCHITECTURE",
+      "systems": [
+        "Market Positioning Architecture",
+        "Influencer Deployment Systems",
+        "Paid Growth Infrastructure",
+        "Brand Identity Engineering",
+        "Content Distribution Framework"
+      ]
+    },
+    "caseImpact": {
+      "title": "CASE IMPACT"
+    },
+    "umbrellaAdvantage": {
+      "headlineLine1": "WE CONTROL",
+      "headlineLine2": "CREATORS",
+      "headlineLine3": "AND",
+      "headlineLine4": "STRATEGY.",
+      "description": "Most agencies guess. We know. Because we manage the talent that drives the culture you're trying to enter."
+    },
+    "finalCTA": {
+      "headline": "BUILD YOUR GROWTH SYSTEM.",
+      "buttonText": "APPLY NOW"
+    }
+  },
+  "hospitalityV2": {
+    "hero": {
+      "line1": "EMPTY SEATS",
+      "line2": "ARE A",
+      "line3": "STRATEGY",
+      "line4": "PROBLEM.",
+      "ctaText": "FILL MY RESTAURANT",
+      "bgVideo": "/assets/hospitality-bg.mp4",
+      "fallbackImg": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop"
+    },
+    "inconsistency": {
+      "title": "THE COST OF INCONSISTENCY",
+      "points": [
+        "Unpredictable foot traffic",
+        "Weak branding",
+        "No influencer leverage",
+        "Low retention"
+      ]
+    },
+    "growthEngine": {
+      "title": "THE HOSPITALITY GROWTH ENGINE",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Local Attention Domination"
+        },
+        {
+          "number": "02",
+          "title": "Influencer Event Nights"
+        },
+        {
+          "number": "03",
+          "title": "Paid Foot Traffic Campaigns"
+        },
+        {
+          "number": "04",
+          "title": "Visual Brand Identity"
+        },
+        {
+          "number": "05",
+          "title": "Launch & Relaunch Strategy"
+        }
+      ]
+    },
+    "transformation": {
+      "title": "TRANSFORMATION",
+      "metrics": [
+        {
+          "value": "40%",
+          "label": "Capacity Increase"
+        },
+        {
+          "value": "2.5X",
+          "label": "Revenue Lift"
+        },
+        {
+          "value": "+100%",
+          "label": "Monthly Reservations"
+        }
+      ]
+    },
+    "roiLogic": {
+      "title": "ROI LOGIC",
+      "headline": "INVESTMENT VS. RETURN",
+      "description": "Marketing isn't an expense. It's a revenue multiplier. For every $1 invested in our growth engine, our average hospitality client sees $4 in tracked revenue.",
+      "chartData": [
+        {
+          "label": "investment",
+          "value": 20
+        },
+        {
+          "label": "Revenue",
+          "value": 80
+        }
+      ]
+    },
+    "finalCTA": {
+      "headline": "BOOK GROWTH CONSULTATION.",
+      "buttonText": "APPLY NOW"
+    }
+  },
+  "dedicatedPageContent": {
+    "fullCaseStudies": [
+      {
+        "id": "cs-1",
+        "category": "E-Commerce",
+        "name": "AR Fragrances",
+        "relationship": "Video Advertising",
+        "location": "Pakistan",
+        "campaignDuration": "Ongoing",
+        "website": "https://arfragrances.pk",
+        "metricHeadline": "HIGH CONVERSION",
+        "title": "AR Fragencies Perfumes",
+        "description": "High-end video ad campaigns driving sales and brand prestige for Pakistan's best perfume brand.",
+        "servicesProvided": [
+          "Video Ads",
+          "Creative Direction",
+          "Performance Marketing"
+        ],
+        "metrics": {
+          "impressions": "Massive",
+          "reach": "Targeted",
+          "engagementRate": "High",
+          "conversions": "Boosted",
+          "ctr": "High",
+          "roas": "High"
+        },
+        "visuals": [
+          "/assets/cs-arfragrances.png"
+        ],
+        "outcome": "Significantly boosted online sales through striking visual ad campaigns.",
+        "image": "/assets/cs-arfragrances.png",
+        "statList": [
+          "High Engagement"
+        ]
+      },
+      {
+        "id": "cs-2",
+        "category": "Fashion",
+        "name": "Surteez",
+        "relationship": "Video Advertising",
+        "location": "Online",
+        "campaignDuration": "Ongoing",
+        "website": "https://surteez.com",
+        "metricHeadline": "INCREASED SALES",
+        "title": "Premium Casual Wear",
+        "description": "Dynamic video advertisements highlighting premium casual wear and driving conversions.",
+        "servicesProvided": [
+          "Video Ads",
+          "Creative Strategy"
+        ],
+        "metrics": {
+          "impressions": "Targeted",
+          "reach": "Broad",
+          "engagementRate": "Excellent",
+          "conversions": "High",
+          "ctr": "Strong",
+          "roas": "Positive"
+        },
+        "visuals": [
+          "/assets/cs-surteez.png"
+        ],
+        "outcome": "Elevated brand perception and drove increased sales volume across the hoodie and tracksuits collections.",
+        "image": "/assets/cs-surteez.png",
+        "statList": []
+      },
+      {
+        "id": "cs-3",
+        "category": "E-Commerce",
+        "name": "Pyari Scents",
+        "relationship": "Video Advertising",
+        "location": "Online",
+        "campaignDuration": "Ongoing",
+        "website": "https://www.pyariscents.com",
+        "metricHeadline": "VIRAL REACH",
+        "title": "Luxury Scents Ads",
+        "description": "Sleek video creatives designed to capture attention and elevate the perception of luxury scents.",
+        "servicesProvided": [
+          "Video Ads",
+          "Content Production"
+        ],
+        "metrics": {
+          "impressions": "High",
+          "reach": "Expanded",
+          "engagementRate": "Strong",
+          "conversions": "Rapid",
+          "ctr": "High",
+          "roas": "High"
+        },
+        "visuals": [
+          "/assets/cs-pyariscents.png"
+        ],
+        "outcome": "Generated viral attention and accelerated product movement.",
+        "image": "/assets/cs-pyariscents.png",
+        "statList": []
+      },
+      {
+        "id": "cs-4",
+        "category": "Home Decor",
+        "name": "Neon Walls",
+        "relationship": "Video Advertising",
+        "location": "Pakistan",
+        "campaignDuration": "Ongoing",
+        "website": "https://neonwalls.pk",
+        "metricHeadline": "BRAND AWARENESS",
+        "title": "Custom Neon Signs",
+        "description": "Vibrant and catchy video ads promoting custom neon signs and capturing the perfect aesthetic.",
+        "servicesProvided": [
+          "Video Content",
+          "Ad Creation"
+        ],
+        "metrics": {
+          "impressions": "Massive",
+          "reach": "Targeted",
+          "engagementRate": "High",
+          "conversions": "Significant",
+          "ctr": "Great",
+          "roas": "Positive"
+        },
+        "visuals": [
+          "/assets/cs-neonwalls.png"
+        ],
+        "outcome": "Increased footprint and brand awareness in the highly competitive home decor market.",
+        "image": "/assets/cs-neonwalls.png",
+        "statList": []
+      },
+      {
+        "id": "cs-5",
+        "category": "F&B",
+        "name": "Yofroyo",
+        "relationship": "Editing Project",
+        "location": "Online/Local",
+        "campaignDuration": "Completed",
+        "website": "https://www.yofroyo.net",
+        "metricHeadline": "VISUAL EXCELLENCE",
+        "title": "Frozen Yogurt Enhancements",
+        "description": "Professional video editing highlighting Yofroyo's frozen yogurt brand for an immersive visual experience.",
+        "servicesProvided": [
+          "Video Editing",
+          "Post-Production"
+        ],
+        "metrics": {
+          "impressions": "Improved",
+          "reach": "Local",
+          "engagementRate": "High",
+          "conversions": "Supported",
+          "ctr": "N/A",
+          "roas": "N/A"
+        },
+        "visuals": [
+          "/assets/cs-yofroyo.png"
+        ],
+        "outcome": "Delivered stunning visual cuts enhancing the brand identity.",
+        "image": "/assets/cs-yofroyo.png",
+        "statList": []
+      }
+    ],
+    "fullTalentRoster": [
+      {
+        "id": "tln-1",
+        "category": "Finance",
+        "name": "Stoic Trader",
+        "relationship": "EXCLUSIVELY SIGNED",
+        "location": "Pakistan",
+        "campaignDuration": "Since 2023",
+        "metricHeadline": "1.2M FOLLOWERS",
+        "title": "The Market Philosopher",
+        "logo": "/assets/tlt-stoic.png",
+        "description": "Managed his social media accounts and content creation for his brand.",
+        "servicesProvided": [
+          "Account Handling",
+          "Content Creation",
+          "Content Ideas",
+          "Content Strategy"
+        ],
+        "metrics": {
+          "followers": "150k+",
+          "engagement": "8.5%",
+          "reach": "2M/mo",
+          "demographic": "Gen Z",
+          "avgViews": "80K"
+        },
+        "visuals": [
+          "/assets/tlt-stoic.png"
+        ],
+        "outcome": "Has built one of the most loyal financial communities on Instagram, driving consistent high-ticket conversions.",
+        "image": "/assets/tlt-stoic.png",
+        "socials": [
+          {
+            "platform": "instagram",
+            "url": "https://instagram.com/stoictraderzz"
+          },
+          {
+            "platform": "tiktok",
+            "url": "https://tiktok.com/stoic_traderz"
+          }
+        ],
+        "socialChannels": [],
+        "niche": "Trading"
+      },
+      {
+        "id": "tln-2",
+        "category": "Finance",
+        "name": "Hurraira Trades",
+        "relationship": "MANAGED",
+        "location": "Pakistan",
+        "logo": "/assets/talent-hurraira.png",
+        "campaignDuration": "Since 2K Followers",
+        "website": "https://instagram.com/hurairah_trades",
+        "metricHeadline": "550K+ FOLLOWERS",
+        "title": "Trading Educator",
+        "description": "We worked closely with Hurraira to build a massive audience, taking him from 2k followers to over 200k in record time.",
+        "servicesProvided": [
+          "Audience Scaling",
+          "Content Editing",
+          "Strategy"
+        ],
+        "metrics": {
+          "followers": "550K",
+          "engagement": "High",
+          "reach": "5M/mo",
+          "demographic": "Traders",
+          "avgViews": "100K",
+          "conversion": "High Volume"
+        },
+        "visuals": [
+          "/assets/talent-hurraira.png"
+        ],
+        "outcome": "Massive exponential follower growth, turning basic trading insights into viral lessons.",
+        "image": "/assets/talent-hurraira.png",
+        "socials": [
+          {
+            "platform": "instagram",
+            "url": "https://instagram.com/hurairah_trades"
+          }
+        ],
+        "socialChannels": [
+          {
+            "platform": "Instagram",
+            "handle": "@Hurraira_Trades",
+            "followers": "550+ K",
+            "url": ""
+          }
+        ],
+        "niche": "Trading"
+      }
+    ]
+  },
+  "applyPage": {
+    "hero": {
+      "title": "WORK WITH US",
+      "subtitle": "We build growth engines. We scale brands. We manage talent.",
+      "description": "We partner with ambitious founders, creators, and talent who are ready to scale with systems — not guesswork.",
+      "primaryBtn": "APPLY TO WORK WITH US",
+      "secondaryBtn": "SEE IF YOU QUALIFY",
+      "whatsappLink": "https://wa.me/923390702403?text=I%20want%20to%20apply%20to%20work%20with%20your%20agency."
+    },
+    "qualification": {
+      "title": "WHO THIS IS FOR",
+      "cards": [
+        {
+          "title": "Scaling Founders",
+          "text": "You already have traction and want systems that multiply revenue."
+        },
+        {
+          "title": "Personal Brands & Creators",
+          "text": "You want structured monetization, positioning, and long-term growth."
+        },
+        {
+          "title": "Emerging or Established Talent",
+          "text": "You’re ready for strategic management, not random brand deals."
+        }
+      ]
+    },
+    "disqualification": {
+      "title": "THIS IS NOT FOR",
+      "points": [
+        "Businesses looking for cheap one-off services",
+        "People without budget or urgency",
+        "Brands unwilling to commit to structured execution"
+      ]
+    },
+    "process": {
+      "title": "HOW WE SCALE YOU",
+      "steps": [
+        "Audit & Strategy Mapping",
+        "Growth System Design (Funnels, Automation, Positioning)",
+        "Execution & Talent Structuring",
+        "Optimization & Revenue Scaling"
+      ]
+    },
+    "finalCTA": {
+      "title": "SERIOUS ABOUT GROWTH?",
+      "description": "We only take a limited number of partners at a time.",
+      "buttonText": "START YOUR APPLICATION"
+    }
+  }
+}

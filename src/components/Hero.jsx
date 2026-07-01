@@ -17,6 +17,7 @@ const Hero = () => {
     const shapesRef = useRef([]); // Ref for shape placeholders
     const headlineRef = useRef(null);
     const ctaRef = useRef(null);
+    const scrollIndicatorRef = useRef(null);
     const navigateTo = usePageTransition();
 
     const handleCTA1Click = () => {
@@ -88,6 +89,14 @@ const Hero = () => {
             });
 
             // --- HEADLINE REVEAL ---
+
+            // Fade out scroll indicator
+            tl.to(scrollIndicatorRef.current, {
+                opacity: 0,
+                y: 30,
+                duration: 1.5,
+                ease: "power2.inOut"
+            }, "<");
 
             // Reveal Main Headline
             tl.fromTo(headlineRef.current,
@@ -178,6 +187,13 @@ const Hero = () => {
                     </div>
 
                 </div>
+
+                {/* Bouncing Scroll Down Indicator (Highly Visible on Mobile) */}
+                <div className="hero-scroll-indicator" ref={scrollIndicatorRef}>
+                    <div className="mouse-wheel"></div>
+                    <span className="scroll-text">Scroll Down</span>
+                </div>
+
             </div>
         </section>
     );
