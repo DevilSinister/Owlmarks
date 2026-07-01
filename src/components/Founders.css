@@ -1,0 +1,191 @@
+.founders-section {
+    background-color: var(--color-black);
+    padding: var(--spacing-xl) 0;
+    color: var(--color-white);
+    min-height: 100vh;
+}
+
+.founders-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.founders-header h2 {
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+/* --- DESKTOP ACCORDION --- */
+@media (min-width: 769px) {
+    .founders-layout.desktop-accordion {
+        display: flex;
+        height: 80vh;
+        /* Fixed height for accordion */
+        gap: 20px;
+    }
+
+    .founder-card {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        cursor: pointer;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .founder-card:last-child {
+        border-right: none;
+    }
+
+    .founder-card.active {
+        flex: 3;
+        /* Expand active card */
+    }
+
+    .founder-img-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .founder-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%);
+        transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .founder-card.active .founder-img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+
+    .founder-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: var(--spacing-md);
+        z-index: 2;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        transform: translateY(20%);
+        /* Hide bio initially */
+        transition: transform 0.5s ease;
+    }
+
+    .founder-card.active .founder-content {
+        transform: translateY(0);
+    }
+
+    .founder-name {
+        font-family: var(--font-condensed);
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        white-space: nowrap;
+        /* Prevent stacking active */
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .founder-card.active .founder-name {
+        opacity: 1;
+    }
+
+    .founder-role {
+        font-family: var(--font-primary);
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.4s ease 0.1s;
+    }
+
+    .founder-card.active .founder-role {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .founder-bio-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .founder-card.active .founder-bio-wrapper {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+/* --- MOBILE STICKY STACK --- */
+@media (max-width: 768px) {
+    .founders-layout.mobile-stack {
+        display: block;
+        padding-bottom: 10vh;
+    }
+
+    .founder-card {
+        position: sticky;
+        /* top is set inline dynamically in JSX */
+        height: 70vh;
+        margin-bottom: 5vh;
+        background-color: var(--color-black);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .founder-img-wrapper {
+        height: 60%;
+        width: 100%;
+        position: relative;
+    }
+
+    .founder-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(0%);
+        /* Always color on mobile */
+    }
+
+    .founder-content {
+        height: 40%;
+        padding: var(--spacing-md);
+        background-color: #111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .founder-name {
+        font-size: 2.5rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .founder-role {
+        color: var(--color-accent);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .founder-bio {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}

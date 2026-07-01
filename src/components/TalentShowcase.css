@@ -1,0 +1,240 @@
+.talent-section {
+    background-color: var(--color-black);
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.talent-headline {
+    font-size: clamp(4rem, 12vw, 10rem);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-white);
+}
+
+.talent-carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* Native scroll support as fallback/companion */
+    overflow-y: hidden;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    cursor: grab;
+    padding-left: 5vw;
+    /* Align with container padding visually */
+}
+
+.talent-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.talent-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.talent-carousel {
+    display: flex;
+    gap: var(--spacing-md);
+    width: max-content;
+    /* Allow content to dictate width */
+    padding-right: 5vw;
+}
+
+.talent-card {
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+    .talent-card {
+        width: 30vw;
+        /* 3 cards visible mostly */
+        height: 70vh;
+    }
+}
+
+.talent-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+/* UPDATED INFO BLOCK */
+.talent-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-md);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 20%, transparent);
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.talent-niche {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.talent-name {
+    font-family: var(--font-condensed);
+    font-size: 2.5rem;
+    /* Adjusted for multiple lines */
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+}
+
+/* SOCIAL LINKS CONTAINER */
+.talent-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Increased vertical spacing (Mobile Polish) */
+    margin-top: 10px;
+    width: 100%;
+}
+
+.talent-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    /* Slightly larger for readability */
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    min-height: 40px;
+    /* Prevent layout jump */
+}
+
+.talent-social-link:hover {
+    border-color: var(--color-accent);
+    padding-left: 5px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ts-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Icon gap */
+}
+
+.ts-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    opacity: 0.9;
+}
+
+.ts-platform {
+    font-weight: 500;
+    opacity: 0.9;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+}
+
+.ts-followers {
+    font-weight: 800;
+    /* Extra bold */
+    color: var(--color-accent);
+    /* ORANGE ACCENT */
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+/* HOVER EFFECTS */
+.talent-card:hover .talent-img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.talent-card:hover .talent-info {
+    transform: translateY(0);
+}
+
+/* LOADER & ANIMATION */
+.ts-loader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 74, 28, 0.3);
+    /* Orange tint */
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .talent-headline {
+        font-size: 15vw;
+        /* Consistent with usage */
+    }
+
+    .talent-card {
+        width: 85vw;
+        /* Wider on mobile */
+        height: 65vh;
+        /* Taller on mobile to fit list */
+    }
+
+    .talent-info {
+        padding: var(--spacing-lg);
+        /* More padding on mobile */
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, transparent);
+        /* Darker backdrop for text */
+    }
+
+    .talent-socials {
+        gap: 12px;
+        /* Even more space on mobile */
+    }
+
+    .talent-social-link {
+        padding: 12px 0;
+        /* Taller tap targets */
+    }
+}

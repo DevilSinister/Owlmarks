@@ -1,0 +1,307 @@
+/* BRANDS V2 STYLES */
+.brands-v2-container {
+    background-color: #f5f5f5;
+    /* Light/White dominance as requested */
+    color: #111;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+/* --- HERO --- */
+.bv2-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw;
+    position: relative;
+    background-color: #050505;
+    /* Keep Hero Dark/Serious */
+    color: #fff;
+}
+
+.bv2-hero-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+/* --- ABSTRACT SHAPES --- */
+.bv2-shape-1 {
+    position: fixed;
+    top: 5vh;
+    right: -5vw;
+    width: 40vw;
+    height: 40vw;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50%;
+    /* Using circle for contrast against grid */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bv2-shape-2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    height: 60vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 5vw 100%;
+    z-index: 0;
+    pointer-events: none;
+    transform: skewX(-20deg);
+    transform-origin: bottom left;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .bv2-shape-1 {
+        width: 80vw;
+        height: 80vw;
+        top: 10vh;
+        right: -30vw;
+        border-color: rgba(0, 0, 0, 0.1);
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, transparent 70%);
+    }
+
+    .bv2-shape-2 {
+        width: 100vw;
+        height: 40vh;
+        bottom: 0;
+        transform: skewX(0);
+        background-size: 10vw 100%;
+    }
+}
+
+.bv2-hero-title {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 7vw, 7rem);
+    line-height: 0.9;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.bv2-hero-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.bv2-btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid #fff;
+    width: fit-content;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.bv2-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* --- MARKET REALITY --- */
+.bv2-reality {
+    padding: 15vh 5vw;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid #eee;
+}
+
+.bv2-reality-head {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #000;
+}
+
+.bv2-reality-desc {
+    max-width: 600px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #444;
+}
+
+/* --- STRATEGIC ARCHITECTURE --- */
+.bv2-arch {
+    padding: 15vh 5vw;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.bv2-arch-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #666;
+    margin-bottom: 5rem;
+    display: block;
+    font-weight: 700;
+}
+
+.bv2-system-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid #ccc;
+}
+
+.bv2-system-row {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #ccc;
+    font-family: var(--font-condensed);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    text-transform: uppercase;
+    color: #222;
+    transition: padding-left 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.bv2-system-row:hover {
+    padding-left: 20px;
+    color: var(--color-accent);
+    background-color: #e8e8e8;
+}
+
+/* --- CASE IMPACT --- */
+.bv2-impact {
+    padding: 15vh 5vw;
+    background-color: #fff;
+}
+
+.bv2-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.bv2-case-row {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.bv2-case-row:hover {
+    border-color: #000;
+}
+
+.bv2-case-metric {
+    font-family: var(--font-condensed);
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.bv2-case-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.bv2-case-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.bv2-case-meta {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* --- UMBRELLA ADVANTAGE --- */
+.bv2-umbrella {
+    padding: 15vh 5vw;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bv2-umb-head {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.bv2-umb-desc {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+/* --- FINAL CTA --- */
+.bv2-final {
+    padding: 20vh 5vw;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.bv2-final-head {
+    font-family: var(--font-condensed);
+    font-size: clamp(2rem, 5vw, 5rem);
+    text-transform: uppercase;
+    max-width: 900px;
+}
+
+.bv2-final-btn {
+    padding: 1.2rem 3rem;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bv2-final-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .bv2-system-row {
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+    }
+}

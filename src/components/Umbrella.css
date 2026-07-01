@@ -1,0 +1,166 @@
+.umbrella-section {
+    background-color: var(--color-black);
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Headline */
+.umbrella-headline {
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.headline-line {
+    font-size: clamp(3rem, 12vw, 10rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.indent-1 {
+    margin-left: 5vw;
+    color: #333;
+    /* Stylistic choice: darker second line or keeping white? User said "Three Forces One Vision" so maybe all white. Let's keep white for readability against black */
+    color: var(--color-white);
+}
+
+.indent-2 {
+    margin-left: 10vw;
+    color: var(--color-accent);
+}
+
+/* Pillars Container */
+.umbrella-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    /* Increased gap for mobile */
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    .umbrella-pillars {
+        flex-direction: row;
+        gap: var(--spacing-md);
+        height: 80vh;
+        /* Tall panels on desktop */
+        margin-left: -5vw;
+        /* Break container slightly */
+        margin-right: -5vw;
+        width: 100vw;
+        padding: 0 5vw;
+    }
+}
+
+/* Pillar Card */
+.pillar-card {
+    position: relative;
+    flex: 1;
+    height: 50vh;
+    /* Reduced mobile height */
+    overflow: hidden;
+    cursor: pointer;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (min-width: 1024px) {
+    .pillar-card {
+        height: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: none;
+    }
+}
+
+.pillar-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(0.6);
+    transition: filter 0.6s ease, transform 0.8s ease;
+    z-index: 0;
+}
+
+.pillar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+.pillar-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 0%;
+    /* Grows on hover */
+    background-color: var(--color-accent);
+    z-index: 2;
+    transition: height 0.4s ease;
+}
+
+.pillar-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacing-md);
+    transition: transform 0.4s ease;
+}
+
+.pillar-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.pillar-desc {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    opacity: 0.7;
+    max-width: 300px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECTS */
+.pillar-card:hover .pillar-bg {
+    filter: grayscale(0%) brightness(0.8);
+    transform: scale(1.05);
+}
+
+.pillar-card:hover .pillar-overlay {
+    opacity: 0.6;
+}
+
+.pillar-card:hover .pillar-accent {
+    height: 100%;
+}
+
+.pillar-card:hover .pillar-title {
+    transform: translateX(15px);
+    color: var(--color-white);
+}
+
+.pillar-card:hover .pillar-desc {
+    transform: translateY(0);
+    opacity: 1;
+}

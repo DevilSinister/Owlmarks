@@ -1,0 +1,51 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10002;
+    /* Above Modal (10000) */
+    transform: translate(-50%, -50%);
+    /* Centered on mouse */
+    mix-blend-mode: difference;
+    /* Ensures visibility on light/dark */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    /* Performance optimization */
+}
+
+.cursor-text {
+    font-family: var(--font-primary);
+    font-size: 3px;
+    /* Tiny text - scales up with cursor */
+    font-weight: 700;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide default cursor only when custom is active */
+@media (min-width: 992px) {
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    .pillar-card,
+    img {
+        cursor: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .custom-cursor {
+        display: none;
+    }
+}

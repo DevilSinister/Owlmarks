@@ -1,0 +1,285 @@
+.cs-section {
+    background-color: var(--color-white);
+    /* Remove padding-bottom to let the last card sit flush if needed */
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-black);
+}
+
+/* --- HEADLINE --- */
+.cs-header-wrapper {
+    margin-bottom: 4rem;
+    /* Reduced slightly to let cards enter sooner */
+    padding-left: 5vw;
+}
+
+.cs-main-headline {
+    font-size: clamp(4rem, 12vw, 11rem);
+    line-height: 0.8;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+}
+
+.cs-headline-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-black);
+    opacity: 0.5;
+}
+
+/* --- STACKING LIST --- */
+.cs-list {
+    position: relative;
+    padding-bottom: 20vh;
+    /* Buffer at bottom */
+}
+
+/* CARD ROW (THE STICKY ITEM) */
+.cs-row {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    /* Essential for covering previous card */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for depth */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .cs-row {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5%;
+        padding: 0 5vw;
+    }
+
+    .cs-row-reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+/* --- CONTENT BLOCK --- */
+.cs-content {
+    flex: 1;
+    max-width: 600px;
+    padding: var(--spacing-md);
+    z-index: 2;
+}
+
+.cs-metric-statement {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 6vw, 6rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-black);
+}
+
+.cs-case-title {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+    color: #555;
+    font-weight: 600;
+}
+
+.cs-case-desc {
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: var(--spacing-lg);
+    max-width: 90%;
+}
+
+/* Supporting stats list */
+.cs-stats-loop {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.cs-loop-item {
+    font-family: var(--font-condensed);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #111;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    gap: 8px;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+.cs-bullet {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* --- IMAGE BLOCK --- */
+.cs-image-block {
+    flex: 1.2;
+    width: 100%;
+    height: 70vh;
+    /* Taller image for desktop */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cs-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+/* Custom Accent Line */
+.cs-accent-line {
+    position: absolute;
+    bottom: 40px;
+    right: -30px;
+    width: 0%;
+    height: 8px;
+    background-color: var(--color-accent);
+    transition: width 0.5s ease-out;
+    z-index: 5;
+}
+
+/* Hover Effects */
+.cs-image-wrapper:hover .cs-image {
+    transform: scale(1.05);
+}
+
+.cs-image-wrapper:hover .cs-accent-line {
+    width: 150px;
+}
+
+/* --- MOBILE (Horizontal Snap Gallery) --- */
+@media (max-width: 1024px) {
+    .cs-section {
+        padding-top: var(--spacing-xl);
+        overflow: hidden;
+        /* Mobile: Standard block flow, let scroll happen horizontally */
+    }
+
+    .cs-list {
+        /* Reset Stacking Logic for Mobile */
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding-bottom: 40px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 0;
+        /* No huge sticky buffer */
+
+        /* Hide scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .cs-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cs-row {
+        /* Reset Sticky Logic */
+        position: relative;
+        top: auto !important;
+        /* Force reset inline React styles */
+        left: auto !important;
+        transform: none !important;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+
+        /* Card Dimensions */
+        min-width: 85vw;
+        scroll-snap-align: center;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 0;
+    }
+
+    .cs-row-reverse {
+        flex-direction: column;
+    }
+
+    .cs-image-block {
+        height: auto;
+        /* Let image define height or fixed */
+        min-height: 250px;
+        aspect-ratio: 16/9;
+        width: 100%;
+        order: -1;
+        /* Image Top */
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .cs-image-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        /* cover block */
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+    }
+
+    .cs-content {
+        padding: 0;
+        text-align: left;
+    }
+
+    .cs-metric-statement {
+        font-size: 3rem;
+        /* Resize appropriate for mobile card */
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .cs-loop-item {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .cs-accent-line {
+        right: 0;
+        bottom: 10px;
+        width: 60px;
+        /* Always visible */
+    }
+}

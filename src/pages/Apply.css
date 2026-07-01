@@ -1,0 +1,235 @@
+/* APPLY PAGE STYLES */
+.apply-page-container {
+    background-color: #050505;
+    color: #fff;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+/* --- HERO --- */
+.ap-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ap-hero-title {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.9;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.ap-hero-sub {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    background: linear-gradient(90deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    font-weight: 600;
+}
+
+.ap-hero-desc {
+    font-size: 1.1rem;
+    color: #888;
+    max-width: 600px;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+}
+
+.ap-btn-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ap-btn-primary {
+    padding: 1.2rem 2.5rem;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.ap-btn-primary:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.ap-btn-secondary {
+    padding: 1.2rem 2.5rem;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.ap-btn-secondary:hover {
+    border-color: #fff;
+}
+
+/* --- QUALIFICATION --- */
+.ap-qual {
+    padding: 15vh 5vw;
+    background-color: #0a0a0a;
+}
+
+.ap-section-head {
+    font-family: var(--font-condensed);
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.ap-qual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ap-card {
+    background-color: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ap-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+}
+
+.ap-card-title {
+    font-family: var(--font-condensed);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.ap-card-text {
+    font-size: 1rem;
+    color: #999;
+    line-height: 1.6;
+}
+
+/* --- DISQUALIFICATION --- */
+.ap-disqual {
+    padding: 15vh 5vw;
+    background-color: #050505;
+    text-align: center;
+}
+
+.ap-disqual-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.ap-disqual-item {
+    font-size: 1.2rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ap-disqual-item::before {
+    content: "✕";
+    color: #444;
+    font-weight: bold;
+}
+
+/* --- PROCESS --- */
+.ap-process {
+    padding: 15vh 5vw;
+    background-color: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ap-step-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ap-step {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    transition: padding-left 0.3s ease;
+}
+
+.ap-step:hover {
+    padding-left: 2rem;
+    border-bottom-color: var(--color-accent);
+}
+
+.ap-step-num {
+    font-family: var(--font-condensed);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.ap-step-txt {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ddd;
+}
+
+/* --- FINAL CTA --- */
+.ap-final {
+    padding: 20vh 5vw;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ap-final-desc {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .ap-step {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

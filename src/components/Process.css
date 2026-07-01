@@ -1,0 +1,183 @@
+.process-section {
+    background-color: var(--color-black);
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-header h2 {
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+/* Timeline Container */
+.process-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+/* Vertical Line */
+.timeline-line-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-line-accent {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0%;
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Steps */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
+}
+
+.process-step {
+    position: relative;
+    width: 50%;
+    padding: 0 var(--spacing-xl);
+    display: flex;
+    align-items: center;
+}
+
+.step-left {
+    left: 0;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.step-right {
+    left: 50%;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Mobile Adjustments for Timeline */
+@media (max-width: 768px) {
+
+    .timeline-line-bg,
+    .timeline-line-accent {
+        left: 20px;
+    }
+
+    .process-step {
+        width: 100%;
+        left: 0;
+        padding-left: 60px;
+        /* Space for line */
+        padding-right: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .step-marker {
+        left: 14px !important;
+        /* Center on line (20px - 6px/2 - border) */
+        right: auto !important;
+    }
+}
+
+
+.step-content {
+    background: transparent;
+    transition: transform 0.3s ease;
+    max-width: 350px;
+}
+
+.step-number {
+    font-family: var(--font-condensed);
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    /* Subtle initially */
+    display: block;
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.step-title {
+    font-family: var(--font-condensed);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xs);
+    transition: color 0.3s ease;
+}
+
+.step-desc {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+/* Marker Dot */
+.step-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    top: 50%;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.step-left .step-marker {
+    right: -6px;
+    /* Center on line */
+}
+
+.step-right .step-marker {
+    left: -6px;
+    /* Center on line */
+}
+
+/* HOVER EFFECTS */
+.step-content:hover {
+    transform: scale(1.03);
+}
+
+.step-content:hover .step-number {
+    color: rgba(255, 74, 28, 0.2);
+    /* Orange tint */
+    transform: translateX(10px);
+}
+
+.step-content:hover .step-title {
+    color: var(--color-accent);
+}
+
+.process-step:hover .step-marker {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent);
+    transform: scale(1.5);
+}

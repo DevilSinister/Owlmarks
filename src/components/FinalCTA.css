@@ -1,0 +1,76 @@
+.final-cta-section {
+    position: relative;
+    min-height: 60vh;
+    /* Reduced from fixed 100vh */
+    height: auto;
+    /* Dynamic height */
+    padding: var(--spacing-xl) 0;
+    /* Add vertical padding */
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.cta-headline {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 8vw, 8rem);
+    /* Reduced from 15vw/12rem */
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    /* Reduced margin */
+}
+
+.cta-button {
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    /* Slighly smaller button text */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 1.25rem 3rem;
+    /* Slightly reduced padding */
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.cta-button:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-black);
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 74, 28, 0.4);
+}
+
+/* Page Transition Overlay */
+.cta-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+}

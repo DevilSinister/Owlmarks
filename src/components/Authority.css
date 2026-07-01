@@ -1,0 +1,92 @@
+.authority-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-black);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Headline */
+.authority-headline {
+    margin-bottom: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+}
+
+.authority-headline h2 {
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+/* Metrics Container */
+.authority-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+    .authority-metrics {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Metric Block */
+.metric-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-md) 0;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+.metric-number-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.metric-number {
+    font-family: var(--font-condensed);
+    font-weight: 700;
+    font-size: clamp(5rem, 15vw, 12rem);
+    line-height: 1;
+    color: var(--color-black);
+    display: block;
+}
+
+.metric-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 6px;
+    background-color: var(--color-accent);
+    transition: width 0.4s ease-out;
+}
+
+.metric-label {
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: var(--spacing-sm);
+    font-weight: 500;
+}
+
+/* HOVER EFFECTS */
+.metric-block:hover {
+    transform: scale(1.03);
+    /* Slight scale up */
+}
+
+.metric-block:hover .metric-underline {
+    width: 100%;
+}

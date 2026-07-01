@@ -1,0 +1,769 @@
+.sub-page-container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0;
+    display: block;
+    /* Reset from flex */
+}
+
+.cs-page-header {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cs-page-title {
+    font-family: var(--font-condensed);
+    font-size: clamp(5rem, 15vw, 12rem);
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+
+.text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-white);
+    opacity: 0.5;
+}
+
+/* --- GRID LAYOUT --- */
+.cs-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 1024px) {
+    .cs-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.cs-page-card {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #050505;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.cs-page-card:hover {
+    background-color: #0a0a0a;
+}
+
+/* Image */
+.cs-page-img-wrapper {
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-page-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+    filter: grayscale(100%);
+}
+
+.cs-page-card:hover .cs-page-img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+/* Overlay Metric */
+.cs-page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Dark overlay for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(2px);
+}
+
+.cs-page-card:hover .cs-page-overlay {
+    opacity: 1;
+}
+
+.cs-page-metric {
+    font-family: var(--font-condensed);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(255, 74, 28, 0.4);
+    /* Glow effect */
+    display: block;
+    white-space: nowrap;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.cs-page-card:hover .cs-page-metric {
+    transform: translateY(0);
+}
+
+/* Info */
+.cs-page-info {
+    padding: var(--spacing-md);
+}
+
+.cs-page-project-title {
+    font-family: var(--font-condensed);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cs-page-project-desc {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    max-width: 500px;
+}
+
+/* --- SWITCHER --- */
+.cs-switcher {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cs-switch-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 0.9;
+}
+
+.cs-switch-btn.active {
+    color: var(--color-white);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.cs-switch-btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cs-switch-divider {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-accent);
+}
+
+/* --- ROSTER CARD DESIGN --- */
+.cs-roster-card {
+    height: 70vh;
+    /* Tall portrait cards */
+    border: none;
+    /* Cleaner look */
+}
+
+.cs-roster-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ROSTER OVERLAY (Always visible but enhanced on hover) */
+.cs-roster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacing-md);
+    transition: all 0.4s ease;
+}
+
+.cs-roster-card:hover .cs-roster-overlay {
+    height: 50%;
+    /* Grow slightly */
+    background: linear-gradient(to top, var(--color-accent), transparent);
+    /* Color pop */
+}
+
+.cs-roster-content {
+    transform: translateY(10px);
+    transition: transform 0.4s ease;
+}
+
+.cs-roster-card:hover .cs-roster-content {
+    transform: translateY(0);
+}
+
+.cs-roster-niche {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.cs-roster-name {
+    font-family: var(--font-condensed);
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 15px;
+}
+
+.cs-roster-divider {
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-white);
+    margin-bottom: 15px;
+    transition: width 0.3s ease;
+}
+
+.cs-roster-card:hover .cs-roster-divider {
+    width: 60px;
+}
+
+.cs-roster-stat {
+    font-family: var(--font-condensed);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+}
+
+/* ROSTER SOCIALS */
+.cs-roster-socials {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* disable clicks when hidden */
+}
+
+.cs-roster-card:hover .cs-roster-socials {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.cs-roster-social-link {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.cs-roster-social-link:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* --- FOUNDER PROFILE --- */
+.fd-hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Mobile: Image on TOP (visually), Text at BOTTOM */
+    position: relative;
+    padding-top: 0;
+}
+
+@media (min-width: 1024px) {
+    .fd-hero-section {
+        flex-direction: row;
+        height: auto;
+        /* Allow dynamic height */
+        min-height: 100vh;
+        /* Minimum full screen */
+        overflow: visible;
+        /* Allow content to flow */
+    }
+}
+
+.fd-hero-content {
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-black);
+    z-index: 2;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .fd-hero-content {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: var(--spacing-xl) var(--spacing-xl);
+        /* Reduced from XXL (16rem) to XL (8rem) */
+        height: auto;
+        overflow-y: visible;
+    }
+}
+
+.fd-hero-image-wrapper {
+    width: 100%;
+    height: 50vh;
+    /* Explicit mobile height */
+    min-height: 400px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .fd-hero-image-wrapper {
+        flex: 1;
+        width: 50%;
+        height: auto;
+        /* Dynamic height */
+        min-height: 100vh;
+        /* Match section min-height */
+        position: sticky;
+        /* Keep image sticky if text is long */
+        top: 0;
+    }
+}
+
+.fd-hero-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .fd-hero-img {
+        filter: grayscale(0%);
+    }
+}
+
+.fd-hero-image-wrapper:hover .fd-hero-img {
+    filter: grayscale(0%);
+}
+
+.fd-img-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, #000 5%, transparent 40%);
+}
+
+@media (min-width: 1024px) {
+    .fd-img-overlay {
+        background: linear-gradient(to right, #000 0%, transparent 40%);
+    }
+}
+
+.fd-hero-role {
+    font-family: var(--font-condensed);
+    color: var(--color-accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+.fd-hero-name {
+    font-family: var(--font-condensed);
+    font-size: clamp(3rem, 6vw, 6rem);
+    /* Reduced scaling */
+    line-height: 0.9;
+    margin-bottom: var(--spacing-md);
+    word-break: break-word;
+}
+
+.fd-hero-bio {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* --- ENHANCED SOCIALS --- */
+.fd-socials-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.fd-social-link {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fd-social-link:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 74, 28, 0.3);
+}
+
+.fd-stats-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.fd-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.fd-stat-value {
+    font-family: var(--font-condensed);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 5px;
+}
+
+.fd-stat-label {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.1em;
+}
+
+.cs-page-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cs-page-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+/* --- NEW ARCHIVE CARD V2 (PREVIEW STATE) --- */
+.cs-archive-card-v2 {
+    height: 60vh;
+    /* Taller for impact */
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Roster Grid - 3 Columns on Desktop */
+@media (min-width: 1024px) {
+    .cs-page-grid.cs-roster-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Roster Specific Override - "Portrait" (Tall) on Desktop */
+.cs-roster-style {
+    height: auto;
+    aspect-ratio: 3/5;
+    /* Enforces strict portrait ratio */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust fonts inside Roster cards to fit 3-col grid */
+.cs-roster-style .cs-card-name {
+    font-size: 1.5rem;
+    /* Smaller than Archive's 2.5rem */
+}
+
+.cs-roster-style .cs-card-metric-value {
+    font-size: 2.5rem;
+    /* Smaller than Archive's 4rem */
+}
+
+.cs-roster-style .cs-card-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    flex-shrink: 0;
+    /* Prevent circle from squishing */
+}
+
+.cs-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+/* Background & Overlay */
+.cs-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.cs-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.cs-archive-card-v2:hover .cs-card-bg {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.cs-archive-card-v2:hover .cs-card-overlay {
+    opacity: 0.6;
+    /* Lighten overlay on hover to see image better */
+}
+
+/* Top Content - UPDATED FOR NO OVERLAP (Global Stacked Layout) */
+.cs-card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    /* Stack globally */
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.cs-card-category {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    line-height: 1;
+    order: 1;
+}
+
+.cs-card-relationship {
+    font-family: var(--font-condensed);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    order: 2;
+    /* Badge in middle */
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.cs-card-name {
+    font-family: var(--font-condensed);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    order: 3;
+    width: 100%;
+    word-break: break-word;
+    /* Prevent overflow */
+}
+
+/* Bottom Content */
+.cs-card-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cs-card-metric-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.cs-card-metric-value {
+    font-family: var(--font-condensed);
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    /* Highlight effect on hover */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cs-archive-card-v2:hover .cs-card-metric-value {
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(255, 74, 28, 0.4);
+}
+
+.cs-card-metric-label {
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+}
+
+.cs-card-arrow {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.cs-archive-card-v2:hover .cs-card-arrow {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    transform: rotate(-45deg);
+}
+
+/* --- MOBILE OPTIMIZATIONS (Use 2 Col Grid & Smaller Elements) --- */
+@media (max-width: 768px) {
+
+    /* Force 2 Columns for Archive & Roster Grid */
+    .cs-page-grid.cs-archive-grid,
+    .cs-page-grid.cs-roster-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Adjust Card Height & Text for Tight Grid */
+    .cs-archive-card-v2 {
+        height: 35vh;
+        /* Reduced height for mobile */
+    }
+
+    .cs-card-inner {
+        padding: 1rem;
+        /* Tighter padding */
+    }
+
+    /* Top Elements */
+    .cs-card-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Stack elements naturally to avoid overlap */
+        gap: 5px;
+    }
+
+    .cs-card-category {
+        font-size: 0.5rem;
+        margin-bottom: 0;
+        order: 1;
+    }
+
+    .cs-card-name {
+        font-size: 1rem;
+        word-break: break-word;
+        line-height: 1.1;
+        order: 3;
+        /* Name comes last in the stack */
+    }
+
+    /* "Creative way" -> Make it a small inline badge above the name */
+    .cs-card-relationship {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 0.45rem;
+        padding: 2px 6px;
+        max-width: 100%;
+        text-align: left;
+        order: 2;
+        /* Badge between Category and Name */
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Bottom Elements */
+    .cs-card-metric-value {
+        font-size: 1.8rem;
+        /* Fit 2 col */
+    }
+
+    .cs-card-metric-label {
+        font-size: 0.5rem;
+    }
+
+    .cs-card-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
